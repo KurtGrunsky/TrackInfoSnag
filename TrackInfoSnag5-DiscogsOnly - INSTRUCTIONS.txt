@@ -1,0 +1,78 @@
+TrackInfoSnag v.5
+
+INSTRUCTIONS FOR USE
+
+ABOUT
+
+	The purpose of this program is to allow for a simple way to fill in missing
+or incorrect information in mp3s' Title and Track ID3 tags. It achieves this by sending
+a request to the site Discogs for this information. The trick is that you have have to
+know what album you have in front of you, since you'll need to find that specific album
+on Discogs to get this program to work. The program doesn't fix any other ID3 tags (so it
+will not fix incorrect album/artist names) and is only intended to work on one album at a
+time. This means that it will probably work best for someone who keeps their mp3 files
+organized in folders by album (or someone who is willing to temporarily group their files
+this way if they want to use this program).
+	The program's not perfect, because Discogs isn't perfect; I've had Ladysmith Black
+Mambazo song titles inexplicably appear in Chinese characters at least once. That being
+said, it's saved me a lot of boring data entry work involved in organizing my music, and
+I hope it will help others in a similar way.
+
+
+Preliminary - READ BEFORE USE:
+-This program is Windows-compatible only; sorry to Mac users, though developers are
+welcome to check the py file and figure out a way to make a compatible version
+-Have the folder open containing ONLY the mp3 files you want to fix track information
+for; I cannot guarantee the program won't do something bad to files in other formats
+contained within the same folder
+-Ensure that the music files you're working with are mp3s; the program relies on editing
+ID3 tags, so it will not work on most other formats
+-Ensure that there are the same number of mp3 tracks in your folder as there are tracks
+listed on the album's Discogs page; some Discogs pages have different track listings for
+different editions of an album
+-Ensure the tracks in the folder are ordered in the order they appear on the album's
+Discogs page; if not, their track numbers will appear incorrectly and names may be wrong
+after running the program
+-Esure you are able to copy and paste the entire path of the folder; a shortened portion
+of it will not work
+
+1. Open TrackInfoSnag5-DiscogsOnly.exe
+
+2. It may take some time, but a small window should pop up with a box for text entry.
+The window will ask you to enter a URL. Enter a URL that links to an album's page on
+the website Discogs.
+
+3. Once you have entered the URL, click "OK". Another small window will pop up asking
+for a folder location. Select the file path from the folder's address bar, copy it and
+paste it to the text box; click "OK" once more.
+
+4. Check the folder containing the mp3 files. If the program worked, the track numbers
+should now appear in the correct order on the files' ID3 tags and all tracks should have
+the correct titles (note that the titles will appear in the "Title" ID3 tags - NOT the
+"Name" tags; I have made this choice because most music players I have been using group
+songs primarily by the "Title" and not the "Name").
+
+5. If the program did not behave as expected, please check the preliminary instructions
+for troubleshooting and ensure your files and Discogs page meet all the right criteria.
+
+
+DEVELOPER NOTES:
+
+	These notes are mainly of interest to those who want to look at the original
+Python file from which the exe was built. First of all, I would like to apologize for
+the mess. Second, I want to point out that the reason the name of this program ends in
+"DiscogsOnly" should become slightly more apparent upon checking the py file. You can
+see remnants of an earlier version of the program that have been commented out; these
+were intended to pull the same kind of track data from Spotify Web Player URLS. I gave
+up on this attempt after having a few successes with it and then many more failures.
+Anyone who wants to is welcome to try getting it working again, but I will also say
+that part of my decision to limit the program to Discogs in the end was based on the
+site having a wider range of release data on it.
+	Finally, I would like to acknowledge the indirect help I received from my
+professor and a stranger on the internet, each of whom, independently of the context
+of this program, taught me about a couple of the tricks I ended up using for it. I
+would also like to thank my father for his help in testing the program to see if it works.
+This is mostly a reminder that none of us ever accomplish anything entirely on our own and
+that coding/programming, like anything else, is a collaborative process. It is thus
+important to me to acknowledge the collective labour that goes into even small projects
+like this one, whether they work or not.
